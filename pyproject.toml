@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "in-silico-pipeline"
+version = "0.1.0"
+description = "In silico pipeline for cheminformatics, molecular data analysis and machine learning."
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+
+dependencies = [
+"rdkit>=2024.9",
+"numpy>=2.0,<3.0",
+"pandas>=2.2,<3.0",
+"matplotlib>=3.9,<4.0",
+"pyarrow>=18.0,<23.0",
+"seaborn>=0.13,<1.0",
+"requests>=2.32,<3.0",
+"chembl-webresource-client>=0.10.9"
+]
+
+[project.optional-dependencies]
+dev = [
+"pytest>=8.0,<9.0",
+"pytest-cov>=5.0,<7.0",
+"ruff>=0.9,<1.0",
+"ipykernel>=6.29,<7.0"
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
