@@ -27,3 +27,15 @@ data/processed/*
 
 # OS
 .DS_Store
+
+build/
+*.aux
+*.log
+*.out
+*.bbl
+*.bcf
+*.blg
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.toc
