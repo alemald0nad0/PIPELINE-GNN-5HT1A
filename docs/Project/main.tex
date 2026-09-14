@@ -1,0 +1,120 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[margin=2.5cm]{geometry}
+
+% ---------- Codificación e idioma ----------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc} % Mejorar la salida de PDF
+\usepackage[spanish, es-tabla]{babel} % Adapta el documento al español    ycambia "Table" por "Tabla"
+\usepackage{lmodern} % Evita que el texto se vea pixelado en el PDF                    
+\usepackage{csquotes} % Facilita la inclusión de citas y referencias bibliográficas
+\usepackage{todonotes}
+
+% ---------- Formato y estilo ----------
+
+\usepackage{pdflscape} % Permite rotar páginas en el PDF
+\usepackage{ragged2e} % Permite justificar el texto de manera más flexible
+\usepackage{xcolor} % Permite usar colores en el texto y en los elementos del documento
+\usepackage{footnote} % Permite personalizar las notas al pie de página
+\usepackage{microtype} % Mejora la tipografía del documento
+
+
+% ---------- Márgenes y geometría ----------
+\usepackage{colortbl} % Permite colorear filas y columnas de tablas
+\usepackage{booktabs} % Crea tablas con un estilo más profesional
+\usepackage{longtable} % Permite crear tablas que se extienden a varias páginas
+\usepackage{array} % Permite definir el ancho de las columnas en las tablas
+\usepackage{setspace} % Permite ajustar el interlineado del documento
+
+
+% ---------- Matemáticas y figuras ----------
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+
+% ---------- Bibliografía (Paso 5) ----------
+\usepackage[hidelinks]{hyperref}
+\usepackage[backend=biber, style=numeric-comp, sorting=none, maxbibnames=99]{biblatex}
+\addbibresource{referencies.bib}
+
+% ---------- Enlaces ----------
+
+
+
+\begin{document}
+
+% ------------------------------- PORTADA -----------------------------------
+\begin{titlepage}
+\thispagestyle{empty}
+\begin{spacing}{1}
+\setlength{\parskip}{0pt}
+\centering
+
+
+\noindent
+\begin{minipage}[c]{0.25\textwidth}
+    \centering
+    \includegraphics[height=2.5cm]{logo_ipn2.png}
+\end{minipage}%
+\hfill
+\begin{minipage}[c]{0.45\textwidth}
+    \centering
+    {\scshape\Large Instituto Politécnico Nacional\par}
+    \vspace{0.15cm}
+    {\scshape\large Escuela Superior de Cómputo\par}
+\end{minipage}%
+\hfill
+\begin{minipage}[c]{0.25\textwidth}
+    \centering
+    \includegraphics[height=2.2cm]{logo_escom.png}
+\end{minipage}
+\par\vspace{1.5cm}
+
+{\rule{\textwidth}{0.5pt}\par}
+\vspace{0.5cm}
+{\LARGE\bfseries
+Pipeline \textit{in silico} basado en redes neuronales de grafos para la
+predicción integrada de afinidad, permeabilidad BBB y toxicidad en moléculas
+dirigidas al receptor 5-HT\textsubscript{1A}\par}
+\vspace{0.7cm}
+{\rule{\textwidth}{0.5pt}\par}
+\vspace{1.2cm}
+
+{\large Trabajo Terminal 1 --- No. 2027-A088\par}
+\vspace{1.5cm}
+
+{\large\bfseries Alumnos\par}
+\vspace{0.20cm}
+{\large Liceaga Cardoso Ángel David\par}
+{\large Maldonado López Alejandro\par}
+{\large Zamora Santiago Aldo Josué\par}
+\vspace{1.5cm}
+
+{\large\bfseries Directores\par}
+\vspace{0.35cm}
+{\large García Cortés Rocío\par}
+{\large Núñez Prado César Jesús\par}
+
+\vfill
+{\large Ciudad de México, octubre 2026\par}
+
+\end{spacing}
+\end{titlepage}
+
+
+% Cuando tengas capítulos reales, se incluyen así:
+% \input{capitulos/01_introduccion}
+
+% \input{capitulos/02_marco_teorico}
+
+\input{sections/introduction.tex}
+
+\input{sections/Objectives.tex}
+
+\input{sections/justification.tex }
+
+\input{sections/state_of_the_art.tex}
+
+
+\printbibliography[title={Referencias}]
+
+\end{document}
