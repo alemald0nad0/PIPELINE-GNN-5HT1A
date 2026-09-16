@@ -40,15 +40,4 @@ build/
 *.fls
 *.toc
 
-
-# LaTeX y Figuras
-*.tex
-*.png
-*.jpg
-*.jpeg
-*.pdf
-*.svg
-*.eps
-*.bib
-
-figures/
+docs/Project/
